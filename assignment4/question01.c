@@ -1,35 +1,36 @@
 /* Name   : Lorenzo Christopher
  * ID#    : 20151747
- * Purpose: Calculator
- * Date   : 23.02.2016
+ * Purpose: Program to find the sum of the digits of a user inputted number.
+ * Date   : 05.04.2016
  */
 
+#include <stdio.h>
 
-
-
-
-
-#include<stdio.h>
-
+// beggining of function main
 int main(int argc, char *argv[])
 {
+    // variable declaration
     int num;
+    int n;
     int sum = 0;
-    int result;
+    int mod;
 
+    // prompt
     printf("Enter a Number: ");
     scanf("%d", &num);
+    
+    // preserve the original value of "num"
+    n = num;
 
+    // while loop to extract each digit of "num" and add them together
     while(num > 0){
-        result = num % 10;
-        num = num / 10;
-        sum = sum + result;
+        mod = num % 10;
+        sum += mod;
+        num /= 10;
     }
-
-    printf("The sum is: %d \n", sum);
+    
+    // display the result
+    printf("The sum of the digits of %d is %d \n", n, sum);
 
     return 0;
 }
-
-
-
