@@ -5,5 +5,13 @@
  */
 
 #include<stdio.h>
-// beggining of function min
+
 int main(int argc, char *argv[])
+{
+    
+    int num;
+    
+    printf("Enter a number to Encrypt: ");
+    scanf("%d", &num);
+
+    
